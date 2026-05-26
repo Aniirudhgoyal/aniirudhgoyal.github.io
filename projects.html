@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Anirudh Goyal</title>
+<meta name="description" content="Selected projects by Anirudh Goyal — LOB mid-price prediction, helmet detection, AI forecasting platform, and bio-diesel yield modelling.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header class="statusbar">
+        <div class="statusbar-left">
+            <a href="index.html" class="brand">
+                <span class="dot"></span>
+                anirudh.goyal
+            </a>
+            <span class="statusbar-meta">
+                <span class="sep">·</span>
+                <span class="accent-text">open to roles</span>
+            </span>
+        </div>
+        <div class="statusbar-right">
+            <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a class="icon-btn" href="Anirudh_Goyal_Tech_CV.pdf" target="_blank" rel="noopener" title="Resume PDF">
+                <i class="fas fa-file-pdf"></i>
+            </a>
+            <a class="icon-btn" href="https://github.com/aniirudhgoyal" target="_blank" rel="noopener" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/anirudhgoyal07/" target="_blank" rel="noopener" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <p class="page-eyebrow">// 02 — Projects</p>
+        <h1 class="page-title">Things I've <span class="accent">built</span></h1>
+        <p class="page-subtitle">Selected projects across ML, computer vision, market microstructure, and chemical-process modelling.</p>
+    </div>
+
+    <div class="bento">
+
+        <!-- FEATURED: LOB Mid-Price Prediction (full width) -->
+        <section class="tile tile-6x2 tile-project interactive">
+            <span class="project-num">★ FEATURED · 01 / 04</span>
+            <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+            <h3 class="project-title">LOB Mid-Price Prediction</h3>
+            <p class="project-desc">
+                Predicting short-term mid-price direction on <strong>NASDAQ AAPL</strong> using limit order book microstructure features and gradient boosting. Trained a <strong>LightGBM multiclass classifier</strong> on 280K events of LOBSTER tick data with <strong>36 engineered features</strong> — order-flow imbalance variants, microprice signal, rolling volatility, message-flow rates, and inter-event timing. Properly evaluated with time-based splits, macro-F1, and per-trade Sharpe with explicit spread-cost analysis.
+            </p>
+
+            <div class="project-results">
+                <div class="result">
+                    <div class="result-label">Macro F1</div>
+                    <div class="result-value">0.41</div>
+                </div>
+                <div class="result">
+                    <div class="result-label">vs. majority</div>
+                    <div class="result-value">+96%</div>
+                </div>
+                <div class="result">
+                    <div class="result-label">Sharpe (raw)</div>
+                    <div class="result-value">+0.34</div>
+                </div>
+                <div class="result">
+                    <div class="result-label">Trades</div>
+                    <div class="result-value">22K</div>
+                </div>
+                <div class="result">
+                    <div class="result-label">Features</div>
+                    <div class="result-value">36</div>
+                </div>
+            </div>
+
+            <p class="project-desc" style="margin-top: -0.25rem;">
+                Caught a <strong>price-level leakage bug</strong> via feature-importance analysis — removing absolute-level features improved generalization. Paper-trading P&amp;L isolates signal quality from execution cost (the classic HFT tension).
+            </p>
+
+            <div class="project-footer">
+                <div class="project-stack">
+                    <span class="chip">LightGBM</span>
+                    <span class="chip">Pandas</span>
+                    <span class="chip">NumPy</span>
+                    <span class="chip">Time-series</span>
+                    <span class="chip">Microstructure</span>
+                </div>
+                <a href="https://github.com/Aniirudhgoyal/lob-midprice-prediction" target="_blank" rel="noopener" class="project-link" title="GitHub repo">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Helmet Detection -->
+        <section class="tile tile-3x2 tile-project interactive">
+            <span class="project-num">02 / 04</span>
+            <div class="project-icon"><i class="fas fa-cube"></i></div>
+            <h3 class="project-title">Helmet Safety Detection</h3>
+            <p class="project-desc">
+                Trained and benchmarked <strong>YOLOv8</strong> against <strong>Faster R-CNN</strong> on the Kaggle Helmet Detection Challenge. End-to-end pipeline in <strong>PyTorch</strong> — data preprocessing, augmentation, training, evaluation. Compared on accuracy, inference speed, and real-time applicability for safety-critical use.
+            </p>
+            <div class="project-footer">
+                <div class="project-stack">
+                    <span class="chip">PyTorch</span>
+                    <span class="chip">YOLOv8</span>
+                    <span class="chip">Faster R-CNN</span>
+                    <span class="chip">CV</span>
+                </div>
+                <a href="https://github.com/aniirudhgoyal" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- AI Forecasting Platform (G+D, internal) -->
+        <section class="tile tile-3x2 tile-project interactive">
+            <span class="project-num">03 / 04</span>
+            <div class="project-icon"><i class="fas fa-server"></i></div>
+            <h3 class="project-title">AI Forecasting Platform</h3>
+            <p class="project-desc">
+                End-to-end sales-forecasting pipeline (G+D internship): <strong>XGBoost</strong> with monthly incremental retraining, <strong>PostgreSQL</strong> persistence, <strong>FastAPI</strong> service, and a <strong>RAG chatbot</strong> for natural-language Q&amp;A on business data. <strong>~15% RMSE improvement</strong> on benchmarks.
+            </p>
+            <div class="project-footer">
+                <div class="project-stack">
+                    <span class="chip">XGBoost</span>
+                    <span class="chip">FastAPI</span>
+                    <span class="chip">PostgreSQL</span>
+                    <span class="chip">RAG</span>
+                </div>
+                <span class="project-link" title="Internal (G+D)" style="cursor: not-allowed;">
+                    <i class="fas fa-lock"></i>
+                </span>
+            </div>
+        </section>
+
+        <!-- Bio-Diesel ML -->
+        <section class="tile tile-6x1 tile-project interactive">
+            <span class="project-num">04 / 04</span>
+            <div class="project-icon"><i class="fas fa-flask"></i></div>
+            <h3 class="project-title">Bio-Diesel Yield Prediction</h3>
+            <p class="project-desc">
+                Compiled a <strong>face-centered CCD dataset (29+ runs)</strong> from published literature; benchmarked Linear Regression, Random Forest, and <strong>AdaBoost</strong> for yield + FFA conversion. AdaBoost won with <strong>R² = 0.97, MSE ≈ 0.25</strong>. Used the model to recommend optimal reaction conditions (time, temperature, methanol:oil ratio) for <strong>95%+ yield</strong>.
+            </p>
+            <div class="project-footer">
+                <div class="project-stack">
+                    <span class="chip">Scikit-learn</span>
+                    <span class="chip">AdaBoost</span>
+                    <span class="chip">Random Forest</span>
+                    <span class="chip">RSM</span>
+                    <span class="chip">Chemical Eng.</span>
+                </div>
+                <a href="https://github.com/aniirudhgoyal" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="foot">
+        © 2026 Anirudh Goyal · <a href="https://github.com/aniirudhgoyal" target="_blank" rel="noopener">more on GitHub →</a>
+    </footer>
+</div>
+
+<nav class="dock" aria-label="Site navigation">
+    <a href="index.html"><i class="fas fa-house"></i><span>Home</span></a>
+    <a href="experience.html"><i class="fas fa-briefcase"></i><span>Experience</span></a>
+    <a href="projects.html"><i class="fas fa-cube"></i><span>Projects</span></a>
+    <a href="education.html"><i class="fas fa-graduation-cap"></i><span>Education</span></a>
+    <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
+</nav>
+
+<script src="script.js" defer></script>
+</body>
+</html>

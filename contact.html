@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Anirudh Goyal</title>
+<meta name="description" content="Contact Anirudh Goyal — IIT Delhi Chemical Engineering. Open to ML, applied AI, and software roles.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header class="statusbar">
+        <div class="statusbar-left">
+            <a href="index.html" class="brand">
+                <span class="dot"></span>
+                anirudh.goyal
+            </a>
+            <span class="statusbar-meta">
+                <span class="sep">·</span>
+                <span class="accent-text">open to roles</span>
+            </span>
+        </div>
+        <div class="statusbar-right">
+            <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a class="icon-btn" href="Anirudh_Goyal_Tech_CV.pdf" target="_blank" rel="noopener" title="Resume PDF">
+                <i class="fas fa-file-pdf"></i>
+            </a>
+            <a class="icon-btn" href="https://github.com/aniirudhgoyal" target="_blank" rel="noopener" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/anirudhgoyal07/" target="_blank" rel="noopener" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <p class="page-eyebrow">// 04 — Contact</p>
+        <h1 class="page-title">Let's <span class="accent">talk</span>.</h1>
+        <p class="page-subtitle">Open to internships and full-time roles in ML, applied AI, and software. Inbox is always open.</p>
+    </div>
+
+    <div class="bento">
+
+        <!-- Main contact card -->
+        <section class="tile tile-4x2 tile-contact interactive">
+            <p class="contact-pre">// reach out</p>
+            <h3 class="contact-title">Get in <span class="accent">touch</span>.</h3>
+            <p class="contact-text">
+                Best way to get a fast reply is email. For longer conversations, drop a message via the form — it'll open your mail client with everything pre-filled. Also happy to chat about reaction kinetics, transformer architectures, or anything in between.
+            </p>
+            <div class="contact-links">
+                <a class="contact-row" href="mailto:anirudhgoyal.iitd@gmail.com">
+                    <span class="icon"><i class="fas fa-envelope"></i></span>
+                    <span class="label">Email</span>
+                    <span class="value">anirudhgoyal.iitd@gmail.com</span>
+                </a>
+                <a class="contact-row" href="https://www.linkedin.com/in/anirudhgoyal07/" target="_blank" rel="noopener">
+                    <span class="icon"><i class="fab fa-linkedin-in"></i></span>
+                    <span class="label">LinkedIn</span>
+                    <span class="value">/in/anirudhgoyal07</span>
+                </a>
+                <a class="contact-row" href="https://github.com/aniirudhgoyal" target="_blank" rel="noopener">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span class="label">GitHub</span>
+                    <span class="value">@aniirudhgoyal</span>
+                </a>
+                <a class="contact-row" href="tel:+919815005567">
+                    <span class="icon"><i class="fas fa-phone"></i></span>
+                    <span class="label">Phone</span>
+                    <span class="value">+91 98150 05567</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact form -->
+        <section class="tile tile-2x2 interactive">
+            <div class="tile-label"><span class="num">/</span> Send a message</div>
+            <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="fn">First name</label>
+                        <input type="text" id="fn" name="first_name" autocomplete="given-name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="ln">Last name</label>
+                        <input type="text" id="ln" name="last_name" autocomplete="family-name" required>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="em">Email</label>
+                    <input type="email" id="em" name="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="msg">Message</label>
+                    <textarea id="msg" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="align-self: flex-start;">
+                    <i class="fas fa-paper-plane"></i> Send
+                </button>
+                <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <!-- Currently looking for -->
+        <section class="tile tile-3x1 tile-now interactive">
+            <div class="tile-label"><span class="num">/</span> Currently looking for</div>
+            <div class="now-grid" style="gap: 0.4rem;">
+                <div class="now-row">
+                    <div class="key">Role</div>
+                    <div class="val">ML / applied AI / SWE <span class="accent">internships</span> &amp; full-time</div>
+                </div>
+                <div class="now-row">
+                    <div class="key">Where</div>
+                    <div class="val">India · Remote · open to relocation</div>
+                </div>
+                <div class="now-row">
+                    <div class="key">Avail.</div>
+                    <div class="val">Immediately for short-term; Summer 2026 for internships</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Response time -->
+        <section class="tile tile-3x1 interactive">
+            <div class="tile-label"><span class="num">/</span> Response time</div>
+            <div style="display: flex; align-items: center; gap: 1rem; flex: 1;">
+                <div style="font-family: var(--mono); font-size: 2rem; font-weight: 700; color: var(--accent); line-height: 1;">&lt; 24h</div>
+                <div style="font-size: 12px; color: var(--text-dim); line-height: 1.5;">
+                    Typical reply window on weekdays. Slower over exams; I'll still reply.
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="foot">
+        © 2026 Anirudh Goyal · <a href="index.html">home</a>
+    </footer>
+</div>
+
+<nav class="dock" aria-label="Site navigation">
+    <a href="index.html"><i class="fas fa-house"></i><span>Home</span></a>
+    <a href="experience.html"><i class="fas fa-briefcase"></i><span>Experience</span></a>
+    <a href="projects.html"><i class="fas fa-cube"></i><span>Projects</span></a>
+    <a href="education.html"><i class="fas fa-graduation-cap"></i><span>Education</span></a>
+    <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
+</nav>
+
+<script src="script.js" defer></script>
+</body>
+</html>
