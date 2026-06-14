@@ -1,58 +1,55 @@
-# Anirudh Goyal — Portfolio Site
+# Anirudh Goyal — Terminal Portfolio
 
-A 5-page bento-grid portfolio. Pure HTML / CSS / JS, no framework, no build step.
+A Bloomberg-terminal / trading-desk inspired portfolio. Green-on-black, with live
+random-walk lines drifting behind every page. Pure HTML / CSS / JS — no framework, no build step.
 
-## Pages
+## Pages (7, separate files)
 
-- `index.html` — home (hero + stat tiles + currently + stack + recognition + contact teaser)
-- `experience.html` — G+D internship deep dive
-- `projects.html` — featured project + 3 supporting projects
-- `education.html` — IIT Delhi + earlier schooling + recognition
+- `index.html` — Home (boot sequence, hero, live ticker, metrics, directory)
+- `experience.html` — Giesecke+Devrient internship
+- `projects.html` — LOB prediction (featured) + 3 more
+- `education.html` — degree, CS minor specialization (5/20 credits, GPA 10.0), Class XII
+- `skills.html` — toolkit + animated proficiency bars
+- `achievements.html` — JEE, Course Star, ML specialization
 - `contact.html` — contact methods + message form
 
-## Files
+## The look
 
-- `*.html` — pages (5)
-- `style.css` — shared styling
-- `script.js` — shared behaviour (theme, clock, typing, glow, reveal animations)
-- `Anirudh_Goyal_Tech_CV.pdf` — linked from header on every page
+- **Palette:** terminal green (#00ff9c) on near-black (#050807), amber (#ffb000) as secondary signal
+- **Random-walk lines:** live animated "stock chart" paths behind every page (the signature element), seeded fresh each visit, with glowing leading dots
+- **Live ticker** under the nav on home (RMSE ▼15%, F1 ▲24%, Sharpe +0.34, …)
+- **Boot sequence** typed on home load (`> initializing portfolio.sh OK`)
+- **Terminal-window panels** with mac-style dots for sub-content
+- **CRT scanline** texture overlay + vignette
+- **Scroll-reveal** fade-ins, **animated proficiency bars**
+- Fonts: Archivo (display), IBM Plex Sans (body), IBM Plex Mono (UI/labels)
+- Respects `prefers-reduced-motion` (lines render static, reveals instant)
 
 ## Local preview
 
 ```bash
-# In this folder:
 python3 -m http.server 8000
-# then open http://localhost:8000
+# open http://localhost:8000
 ```
 
 ## Deploy
 
-**Netlify Drop** — drag this folder onto https://app.netlify.com/drop. Done. Free `*.netlify.app` URL in 30 seconds.
+- **Netlify Drop** — drag this folder onto https://app.netlify.com/drop
+- **GitHub Pages** — push to `<your-username>.github.io`, enable Pages
+- **Vercel** — drag onto vercel.com/new
 
-**GitHub Pages** — create a public repo named `<your-username>.github.io`, drop these files in, push, Settings → Pages → enable. Live at `https://<your-username>.github.io`.
+## Before deploying — update these
 
-**Vercel** — drag folder onto https://vercel.com/new.
+- `aniirudhgoyal` → your real GitHub username (all 6 files)
+- Phone number on contact page (or remove)
+- Course Star certificate, if not accurate
+- Sample project GitHub links point to your profile — swap in real repo URLs
 
-## Features
+## Notes
 
-- 5-page bento grid (asymmetric tile sizes: 1×1 → 6×2)
-- Live IST clock (updates every 30s)
-- Theme toggle (dark default, persists in localStorage)
-- Floating bottom dock nav (5 sections, active state per page)
-- Typing animation on the hero
-- Cursor-following accent glow on interactive tiles
-- Staggered tile reveal on scroll (IntersectionObserver + 1.5s failsafe)
-- Mailto contact form
-- Fully responsive (4-col @ 1100px, 2-col @ 700px)
-- `prefers-reduced-motion` respected
-
-## Things to update before deploying
-
-Search and replace:
-- `aniirudhgoyal` → your actual GitHub username (in all 5 HTML files)
-- The "Reading" line in the Currently tile on `index.html`
-- The operating-principle quote (placeholder content)
-- `+91 98150 05567` → confirm real phone or remove from `contact.html`
+- Experience shows **only Giesecke+Devrient** (Outlier and IITDAA removed per your instruction).
+- CGPA is **8.023**.
+- All figures (F1 +24%, Sharpe +0.34, 36 features, 22K trades) come from your LOB project README.
 
 ---
-© 2026 Anirudh Goyal
+© 2026 Anirudh Goyal — IIT Delhi

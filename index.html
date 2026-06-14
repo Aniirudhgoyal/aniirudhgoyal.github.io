@@ -3,218 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anirudh Goyal — ML Engineer & Builder</title>
-<meta name="description" content="Anirudh Goyal — Dual-degree Chemical Engineering at IIT Delhi. Building ML systems, forecasting pipelines, and applied AI.">
-<meta name="author" content="Anirudh Goyal">
-
-<meta property="og:title" content="Anirudh Goyal — ML Engineer & Builder">
-<meta property="og:description" content="Dual-degree at IIT Delhi. Building ML systems and forecasting pipelines.">
+<title>Anirudh Goyal — ML · Quant · IIT Delhi</title>
+<meta name="description" content="Anirudh Goyal — B.Tech + M.Tech, IIT Delhi. Machine learning, forecasting systems, and quantitative modeling. XGBoost, LightGBM, market microstructure.">
+<meta property="og:title" content="Anirudh Goyal — ML · Quant · IIT Delhi">
+<meta property="og:description" content="Forecasting systems, market microstructure, and stochastic modeling. Built with measurable results.">
 <meta property="og:type" content="website">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="has-ticker">
 
-<div class="app">
+<canvas id="walks" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
 
-    <!-- Status bar -->
-    <header class="statusbar">
-        <div class="statusbar-left">
-            <a href="index.html" class="brand">
-                <span class="dot"></span>
-                anirudh.goyal
-            </a>
-            <span class="statusbar-meta">
-                <span class="sep">·</span>
-                <span class="accent-text">open to roles</span>
-                <span class="sep">·</span>
-                <span>updated May 2026</span>
-            </span>
-        </div>
-        <div class="statusbar-right">
-            <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
-            <a class="icon-btn" href="Anirudh_Goyal_Tech_CV.pdf" target="_blank" rel="noopener" title="Resume PDF">
-                <i class="fas fa-file-pdf"></i>
-            </a>
-            <a class="icon-btn" href="https://github.com/aniirudhgoyal" target="_blank" rel="noopener" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a class="icon-btn" href="https://www.linkedin.com/in/anirudhgoyal07/" target="_blank" rel="noopener" title="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
+<!-- Top bar -->
+<nav class="topbar" aria-label="Primary">
+    <div class="topbar-inner">
+        <a class="monogram" href="index.html">AG<span class="blink"></span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Live ticker -->
+<div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+        <span class="ticker-item"><span class="sym">RMSE</span> <span class="down">▼ 15.0%</span> sales-forecasting</span>
+        <span class="ticker-item"><span class="sym">F1</span> <span class="up">▲ 24.0%</span> LOB-prediction</span>
+        <span class="ticker-item"><span class="sym">SHARPE</span> <span class="up">+0.34</span> backtest</span>
+        <span class="ticker-item"><span class="sym">CGPA</span> <span class="up">8.023</span> / 10.0</span>
+        <span class="ticker-item"><span class="sym">JEE-ADV</span> <span class="up">AIR 4216</span> top 0.4%</span>
+        <span class="ticker-item"><span class="sym">F1-MACRO</span> <span class="up">0.41</span> AAPL-LOB</span>
+        <span class="ticker-item"><span class="sym">TRADES</span> <span class="up">22K</span> backtested</span>
+        <span class="ticker-item"><span class="sym">FEATURES</span> <span class="up">36</span> microstructure</span>
+        <span class="ticker-item"><span class="sym">STATUS</span> <span class="up">● OPEN</span> to internships</span>
+    </div>
+</div>
+
+<main class="page">
+
+    <!-- Hero -->
+    <header class="hero" id="top">
+        <div class="hero-inner">
+            <div id="boot" class="reveal" data-lines='["> initializing portfolio.sh","> loading models: xgboost, lightgbm","> mounting /experience /projects /skills","> auth: open-to-work = true"]' style="margin-bottom:1.6rem;"></div>
+            <span class="eyebrow reveal">ML Engineering · Quantitative Modeling</span>
+            <h1 class="reveal">Anirudh<br>Goyal<span class="accent">_</span><span class="cursor"></span></h1>
+            <p class="hero-sub reveal">
+                B.Tech + M.Tech at <strong>IIT Delhi</strong>. I build forecasting systems and
+                market-microstructure models that ship with a number attached —
+                <strong>15% lower RMSE</strong>, <strong>+24% F1 over baseline</strong>,
+                signals validated by backtesting and Monte Carlo simulation.
+            </p>
+            <div class="hero-cta reveal">
+                <a class="btn primary" href="projects.html">See the work →</a>
+                <a class="btn" href="contact.html">Get in touch</a>
+                <a class="btn ghost" href="Anirudh_Goyal_Tech_CV.pdf" target="_blank" rel="noopener">Résumé ↓</a>
+            </div>
+            <p class="hero-note reveal"><span class="dot">●</span> The paths drifting behind everything are live random walks — a nod to the Monte Carlo and price-prediction work.</p>
         </div>
     </header>
 
-    <!-- THE BENTO GRID -->
-    <div class="bento">
+    <!-- Metrics -->
+    <section class="metrics" aria-label="Headline results">
+        <div class="metrics-inner">
+            <div class="metric"><b><span class="tick down">▼</span>15%</b><span>RMSE — sales forecasting</span></div>
+            <div class="metric"><b><span class="tick">▲</span>24%</b><span>F1 lift — LOB prediction</span></div>
+            <div class="metric"><b>+0.34</b><span>Sharpe — backtested signal</span></div>
+            <div class="metric"><b>Top 0.4%</b><span>JEE Advanced · 1.5M+</span></div>
+        </div>
+    </section>
 
-        <!-- Hero -->
-        <section class="tile tile-4x2 tile-hero interactive">
-            <div class="hero-prompt">whoami</div>
-            <h1 class="hero-name">Anirudh Goyal<span class="accent">.</span></h1>
-            <p class="hero-role">
-                <span class="lead">I&nbsp;build</span>
-                <span class="typed-wrap">
-                    <span class="typed" id="typed">forecasting systems</span><span class="cursor"></span>
-                </span>
-            </p>
-            <p class="hero-bio">
-                <strong>Dual-degree at IIT Delhi</strong> studying Chemical Engineering — but spending most of my time at the intersection of <strong>machine learning, forecasting systems, and applied AI</strong>. I like shipping things end-to-end, from notebooks to production endpoints.
-            </p>
-            <div class="hero-cta">
-                <a href="projects.html" class="btn btn-primary">
-                    <i class="fas fa-arrow-right"></i> See work
-                </a>
-                <a href="contact.html" class="btn btn-ghost">
-                    <i class="fas fa-envelope"></i> Get in touch
-                </a>
+    <!-- Quick directory -->
+    <section class="page-shell" style="padding-top:4rem;">
+        <div class="section-head">
+            <h2>Directory</h2>
+            <span class="section-tag">// jump to a section</span>
+        </div>
+        <div class="grid reveal">
+            <div class="card" onclick="location.href='experience.html'">
+                <div class="card-head">
+                    <h3>Experience</h3>
+                    <span class="card-metric">G+D · ML Intern</span>
+                </div>
+                <p>Forecasting systems at Giesecke+Devrient — XGBoost pipeline, PostgreSQL serving, RAG integration. Shipped with a 15% RMSE cut.</p>
+                <div class="card-links"><a href="experience.html">open /experience →</a></div>
             </div>
-        </section>
-
-        <!-- CGPA -->
-        <section class="tile tile-1x1 tile-stat interactive">
-            <div class="tile-label"><span class="num">/</span> CGPA</div>
-            <div>
-                <div class="stat-value">8.023</div>
-                <div class="stat-meta">out of <strong>10.0</strong></div>
+            <div class="card featured" onclick="location.href='projects.html'">
+                <div class="card-head">
+                    <h3>Projects</h3>
+                    <span class="card-metric">F1 +24% · Sharpe +0.34</span>
+                </div>
+                <p>Limit-order-book mid-price prediction, helmet detection, bio-diesel yield modeling, game-theory optimization. Each carries a headline number.</p>
+                <div class="card-links"><a href="projects.html">open /projects →</a></div>
             </div>
-        </section>
-
-        <!-- JEE -->
-        <section class="tile tile-1x1 tile-stat interactive">
-            <div class="tile-label"><span class="num">/</span> JEE Advanced</div>
-            <div>
-                <div class="stat-value">4216</div>
-                <div class="stat-meta">All-India · <strong>top 0.4%</strong></div>
+            <div class="card" onclick="location.href='education.html'">
+                <div class="card-head">
+                    <h3>Education</h3>
+                    <span class="card-metric">CGPA 8.023 · CS Minor</span>
+                </div>
+                <p>IIT Delhi B.Tech + M.Tech, Chemical Engineering. Minor area in Computer Science — 5/20 credits at a perfect 10.0 GPA. Class XII: 91.6%.</p>
+                <div class="card-links"><a href="education.html">open /education →</a></div>
             </div>
-        </section>
-
-        <!-- Currently -->
-        <section class="tile tile-2x2 tile-now interactive">
-            <div class="tile-label"><span class="num">/</span> Currently</div>
-            <div class="now-grid">
-                <div class="now-row">
-                    <div class="key">Year</div>
-                    <div class="val">3rd year, <span class="accent">Chem. Eng. Dual</span></div>
+            <div class="card" onclick="location.href='skills.html'">
+                <div class="card-head">
+                    <h3>Skills</h3>
+                    <span class="card-metric">Python · LightGBM · PyTorch</span>
                 </div>
-                <div class="now-row">
-                    <div class="key">Where</div>
-                    <div class="val">IIT Delhi · India</div>
-                </div>
-                <div class="now-row">
-                    <div class="key">Building</div>
-                    <div class="val">LOB mid-price prediction with LightGBM &amp; microstructure features</div>
-                </div>
-                <div class="now-row">
-                    <div class="key">Reading</div>
-                    <div class="val"><em>The Sequence</em> on LLM eval methods</div>
-                </div>
-                <div class="now-row">
-                    <div class="key">Open to</div>
-                    <div class="val"><span class="accent">Internships</span> in ML, applied AI, software</div>
-                </div>
+                <p>Languages, ML frameworks, and the quantitative coursework that backs the work — probability, stochastic processes, numerical methods.</p>
+                <div class="card-links"><a href="skills.html">open /skills →</a></div>
             </div>
-        </section>
-
-        <!-- Clock -->
-        <section class="tile tile-1x1 tile-clock interactive">
-            <div class="clock-time" id="clock">--:--</div>
-            <div class="clock-zone">IST · my local time</div>
-        </section>
-
-        <!-- Quote -->
-        <section class="tile tile-1x1 tile-quote">
-            <p class="quote-text">Build things that work first, things that scale second.</p>
-            <p class="quote-author">— operating principle</p>
-        </section>
-
-        <!-- Stack -->
-        <section class="tile tile-3x2 interactive">
-            <div class="tile-label"><span class="num">/</span> Stack</div>
-            <div class="stack-group">
-                <div class="stack-group-label">Languages</div>
-                <div class="stack-chips">
-                    <span class="chip">Python</span>
-                    <span class="chip">C++</span>
-                    <span class="chip">C</span>
-                    <span class="chip">SQL</span>
-                    <span class="chip">MATLAB</span>
+            <div class="card" onclick="location.href='achievements.html'">
+                <div class="card-head">
+                    <h3>Achievements</h3>
+                    <span class="card-metric">AIR 4216</span>
                 </div>
+                <p>JEE Advanced top 0.4%, IIT Delhi Course Star, Stanford × DeepLearning.AI ML specialization.</p>
+                <div class="card-links"><a href="achievements.html">open /achievements →</a></div>
             </div>
-            <div class="stack-group">
-                <div class="stack-group-label">ML / AI</div>
-                <div class="stack-chips">
-                    <span class="chip">PyTorch</span>
-                    <span class="chip">XGBoost</span>
-                    <span class="chip">LightGBM</span>
-                    <span class="chip">Scikit-learn</span>
-                    <span class="chip">YOLOv8</span>
-                    <span class="chip">LangChain</span>
-                    <span class="chip">Ollama</span>
+            <div class="card" onclick="location.href='contact.html'">
+                <div class="card-head">
+                    <h3>Contact</h3>
+                    <span class="card-metric">● open to roles</span>
                 </div>
+                <p>Open to internships and research roles in ML, forecasting, and quantitative modeling. Email, LinkedIn, GitHub, and a message form.</p>
+                <div class="card-links"><a href="contact.html">open /contact →</a></div>
             </div>
-            <div class="stack-group">
-                <div class="stack-group-label">Backend / Data</div>
-                <div class="stack-chips">
-                    <span class="chip">FastAPI</span>
-                    <span class="chip">PostgreSQL</span>
-                    <span class="chip">Pandas</span>
-                    <span class="chip">NumPy</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Recognition -->
-        <section class="tile tile-3x2 tile-recognition interactive">
-            <div class="tile-label"><span class="num">/</span> Recognition</div>
-            <div class="rec-grid">
-                <div class="rec-row">
-                    <span class="rec-year">2023</span>
-                    <span class="rec-text"><strong>JEE Advanced AIR 4216</strong> — top 0.4% of 200k+ candidates; improved from AIR 9310 in JEE Mains.</span>
-                </div>
-                <div class="rec-row">
-                    <span class="rec-year">2023</span>
-                    <span class="rec-text"><strong>Course Star Certificate</strong> — IIT Delhi, for a star-level Intro CS problem (C programming).</span>
-                </div>
-                <div class="rec-row">
-                    <span class="rec-year">2024</span>
-                    <span class="rec-text"><strong>Stanford × DeepLearning.AI</strong> — Supervised ML: Regression &amp; Classification (Andrew Ng).</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Quick contact teaser -->
-        <section class="tile tile-6x1 tile-contact interactive">
-            <p class="contact-pre">// let's talk</p>
-            <h3 class="contact-title">Get in <span class="accent">touch</span>.</h3>
-            <p class="contact-text" style="margin-bottom: 0.5rem;">
-                Open to ML / applied AI / software roles. Drop a line at
-                <a href="mailto:anirudhgoyal.iitd@gmail.com" style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent);">anirudhgoyal.iitd@gmail.com</a>
-                — or use the <a href="contact.html" style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent);">contact page</a>.
-            </p>
-        </section>
-
-    </div>
+        </div>
+    </section>
 
     <footer class="foot">
-        © 2026 Anirudh Goyal · built from scratch with HTML / CSS / JS · <a href="https://github.com/aniirudhgoyal" target="_blank" rel="noopener">source</a>
+        <span>© 2026 Anirudh Goyal — IIT Delhi</span>
+        <span>random walks · seeded fresh on every visit</span>
     </footer>
-</div>
 
-<!-- Floating dock nav -->
-<nav class="dock" aria-label="Site navigation">
-    <a href="index.html"><i class="fas fa-house"></i><span>Home</span></a>
-    <a href="experience.html"><i class="fas fa-briefcase"></i><span>Experience</span></a>
-    <a href="projects.html"><i class="fas fa-cube"></i><span>Projects</span></a>
-    <a href="education.html"><i class="fas fa-graduation-cap"></i><span>Education</span></a>
-    <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
-</nav>
+</main>
 
 <script src="script.js" defer></script>
 </body>

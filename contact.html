@@ -4,157 +4,95 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Anirudh Goyal</title>
-<meta name="description" content="Contact Anirudh Goyal — IIT Delhi Chemical Engineering. Open to ML, applied AI, and software roles.">
-
+<meta name="description" content="Contact Anirudh Goyal — open to internships and research roles in ML, forecasting, and quantitative modeling.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="app">
+<canvas id="walks" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
 
-    <header class="statusbar">
-        <div class="statusbar-left">
-            <a href="index.html" class="brand">
-                <span class="dot"></span>
-                anirudh.goyal
-            </a>
-            <span class="statusbar-meta">
-                <span class="sep">·</span>
-                <span class="accent-text">open to roles</span>
-            </span>
-        </div>
-        <div class="statusbar-right">
-            <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
-            <a class="icon-btn" href="Anirudh_Goyal_Tech_CV.pdf" target="_blank" rel="noopener" title="Resume PDF">
-                <i class="fas fa-file-pdf"></i>
-            </a>
-            <a class="icon-btn" href="https://github.com/aniirudhgoyal" target="_blank" rel="noopener" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a class="icon-btn" href="https://www.linkedin.com/in/anirudhgoyal07/" target="_blank" rel="noopener" title="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </div>
-    </header>
-
-    <div class="page-header">
-        <p class="page-eyebrow">// 04 — Contact</p>
-        <h1 class="page-title">Let's <span class="accent">talk</span>.</h1>
-        <p class="page-subtitle">Open to internships and full-time roles in ML, applied AI, and software. Inbox is always open.</p>
+<nav class="topbar" aria-label="Primary">
+    <div class="topbar-inner">
+        <a class="monogram" href="index.html">AG<span class="blink"></span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </div>
+</nav>
 
-    <div class="bento">
+<main class="page">
+    <div class="page-shell">
+        <div class="page-head reveal">
+            <span class="eyebrow">// 05 — get in touch</span>
+            <h1 class="page-title">Contact<span class="accent">.</span></h1>
+            <p class="page-sub"><span style="color:var(--green)">● </span>Open to internships and research roles. If you're working on forecasting, quantitative modeling, or applied ML — I'd like to hear about it.</p>
+        </div>
 
-        <!-- Main contact card -->
-        <section class="tile tile-4x2 tile-contact interactive">
-            <p class="contact-pre">// reach out</p>
-            <h3 class="contact-title">Get in <span class="accent">touch</span>.</h3>
-            <p class="contact-text">
-                Best way to get a fast reply is email. For longer conversations, drop a message via the form — it'll open your mail client with everything pre-filled. Also happy to chat about reaction kinetics, transformer architectures, or anything in between.
-            </p>
-            <div class="contact-links">
-                <a class="contact-row" href="mailto:anirudhgoyal.iitd@gmail.com">
-                    <span class="icon"><i class="fas fa-envelope"></i></span>
-                    <span class="label">Email</span>
-                    <span class="value">anirudhgoyal.iitd@gmail.com</span>
-                </a>
-                <a class="contact-row" href="https://www.linkedin.com/in/anirudhgoyal07/" target="_blank" rel="noopener">
-                    <span class="icon"><i class="fab fa-linkedin-in"></i></span>
-                    <span class="label">LinkedIn</span>
-                    <span class="value">/in/anirudhgoyal07</span>
-                </a>
-                <a class="contact-row" href="https://github.com/aniirudhgoyal" target="_blank" rel="noopener">
-                    <span class="icon"><i class="fab fa-github"></i></span>
-                    <span class="label">GitHub</span>
-                    <span class="value">@aniirudhgoyal</span>
-                </a>
-                <a class="contact-row" href="tel:+919815005567">
-                    <span class="icon"><i class="fas fa-phone"></i></span>
-                    <span class="label">Phone</span>
-                    <span class="value">+91 98150 05567</span>
-                </a>
+        <div class="grid" style="align-items:start;">
+            <div class="reveal">
+                <div class="contact-rows">
+                    <a class="contact-row" href="mailto:anirudhgoyal.iitd@gmail.com">
+                        <span class="ci">✉</span><span class="cl">email</span><span class="cv">anirudhgoyal.iitd@gmail.com</span>
+                    </a>
+                    <a class="contact-row" href="https://www.linkedin.com/in/anirudhgoyal07/" target="_blank" rel="noopener">
+                        <span class="ci">in</span><span class="cl">linkedin</span><span class="cv">/in/anirudhgoyal07</span>
+                    </a>
+                    <a class="contact-row" href="https://github.com/aniirudhgoyal" target="_blank" rel="noopener">
+                        <span class="ci">&lt;/&gt;</span><span class="cl">github</span><span class="cv">@aniirudhgoyal</span>
+                    </a>
+                    <a class="contact-row" href="tel:+919815005567">
+                        <span class="ci">☎</span><span class="cl">phone</span><span class="cv">+91 98150 05567</span>
+                    </a>
+                    <a class="contact-row" href="Anirudh_Goyal_Tech_CV.pdf" target="_blank" rel="noopener">
+                        <span class="ci">▤</span><span class="cl">résumé</span><span class="cv">download PDF ↓</span>
+                    </a>
+                </div>
             </div>
-        </section>
 
-        <!-- Contact form -->
-        <section class="tile tile-2x2 interactive">
-            <div class="tile-label"><span class="num">/</span> Send a message</div>
-            <form id="contact-form" class="contact-form">
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="fn">First name</label>
-                        <input type="text" id="fn" name="first_name" autocomplete="given-name" required>
+            <div class="contact-block reveal">
+                <h2>Let's build something <span class="accent">measurable</span>.</h2>
+                <p>Drop a message and it'll open in your mail client, pre-filled.</p>
+                <form id="contact-form" class="cform">
+                    <div class="row2">
+                        <div class="field">
+                            <label for="fn">First name</label>
+                            <input type="text" id="fn" name="first_name" autocomplete="given-name" required>
+                        </div>
+                        <div class="field">
+                            <label for="ln">Last name</label>
+                            <input type="text" id="ln" name="last_name" autocomplete="family-name" required>
+                        </div>
                     </div>
-                    <div class="form-field">
-                        <label for="ln">Last name</label>
-                        <input type="text" id="ln" name="last_name" autocomplete="family-name" required>
+                    <div class="field">
+                        <label for="em">Email</label>
+                        <input type="email" id="em" name="email" autocomplete="email" required>
                     </div>
-                </div>
-                <div class="form-field">
-                    <label for="em">Email</label>
-                    <input type="email" id="em" name="email" autocomplete="email" required>
-                </div>
-                <div class="form-field">
-                    <label for="msg">Message</label>
-                    <textarea id="msg" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="align-self: flex-start;">
-                    <i class="fas fa-paper-plane"></i> Send
-                </button>
-                <p class="form-status" role="status" aria-live="polite"></p>
-            </form>
-        </section>
-
-        <!-- Currently looking for -->
-        <section class="tile tile-3x1 tile-now interactive">
-            <div class="tile-label"><span class="num">/</span> Currently looking for</div>
-            <div class="now-grid" style="gap: 0.4rem;">
-                <div class="now-row">
-                    <div class="key">Role</div>
-                    <div class="val">ML / applied AI / SWE <span class="accent">internships</span> &amp; full-time</div>
-                </div>
-                <div class="now-row">
-                    <div class="key">Where</div>
-                    <div class="val">India · Remote · open to relocation</div>
-                </div>
-                <div class="now-row">
-                    <div class="key">Avail.</div>
-                    <div class="val">Immediately for short-term; Summer 2026 for internships</div>
-                </div>
+                    <div class="field">
+                        <label for="msg">Message</label>
+                        <textarea id="msg" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary" style="justify-self:start;">▸ Send message</button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
-        </section>
-
-        <!-- Response time -->
-        <section class="tile tile-3x1 interactive">
-            <div class="tile-label"><span class="num">/</span> Response time</div>
-            <div style="display: flex; align-items: center; gap: 1rem; flex: 1;">
-                <div style="font-family: var(--mono); font-size: 2rem; font-weight: 700; color: var(--accent); line-height: 1;">&lt; 24h</div>
-                <div style="font-size: 12px; color: var(--text-dim); line-height: 1.5;">
-                    Typical reply window on weekdays. Slower over exams; I'll still reply.
-                </div>
-            </div>
-        </section>
-
+        </div>
     </div>
 
     <footer class="foot">
-        © 2026 Anirudh Goyal · <a href="index.html">home</a>
+        <span>© 2026 Anirudh Goyal — IIT Delhi</span>
+        <span><a href="achievements.html">← achievements</a> · <a href="index.html">home →</a></span>
     </footer>
-</div>
-
-<nav class="dock" aria-label="Site navigation">
-    <a href="index.html"><i class="fas fa-house"></i><span>Home</span></a>
-    <a href="experience.html"><i class="fas fa-briefcase"></i><span>Experience</span></a>
-    <a href="projects.html"><i class="fas fa-cube"></i><span>Projects</span></a>
-    <a href="education.html"><i class="fas fa-graduation-cap"></i><span>Education</span></a>
-    <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
-</nav>
+</main>
 
 <script src="script.js" defer></script>
 </body>

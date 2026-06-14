@@ -4,148 +4,134 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Education — Anirudh Goyal</title>
-<meta name="description" content="Education of Anirudh Goyal — IIT Delhi Dual Degree in Chemical Engineering, CGPA 8.023.">
-
+<meta name="description" content="Education of Anirudh Goyal — IIT Delhi B.Tech + M.Tech dual degree in Chemical Engineering with a minor specialization in Computer Science.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="app">
+<canvas id="walks" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
 
-    <header class="statusbar">
-        <div class="statusbar-left">
-            <a href="index.html" class="brand">
-                <span class="dot"></span>
-                anirudh.goyal
-            </a>
-            <span class="statusbar-meta">
-                <span class="sep">·</span>
-                <span class="accent-text">open to roles</span>
-            </span>
-        </div>
-        <div class="statusbar-right">
-            <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
-            <a class="icon-btn" href="Anirudh_Goyal_Tech_CV.pdf" target="_blank" rel="noopener" title="Resume PDF">
-                <i class="fas fa-file-pdf"></i>
-            </a>
-            <a class="icon-btn" href="https://github.com/aniirudhgoyal" target="_blank" rel="noopener" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a class="icon-btn" href="https://www.linkedin.com/in/anirudhgoyal07/" target="_blank" rel="noopener" title="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </div>
-    </header>
-
-    <div class="page-header">
-        <p class="page-eyebrow">// 03 — Education</p>
-        <h1 class="page-title">Academic <span class="accent">foundations</span></h1>
-        <p class="page-subtitle">Schools, scores, and the courses that shaped how I think.</p>
+<nav class="topbar" aria-label="Primary">
+    <div class="topbar-inner">
+        <a class="monogram" href="index.html">AG<span class="blink"></span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </div>
+</nav>
 
-    <div class="bento">
+<main class="page">
+    <div class="page-shell">
+        <div class="page-head reveal">
+            <span class="eyebrow">// 03 — academics</span>
+            <h1 class="page-title">Education<span class="accent">.</span></h1>
+            <p class="page-sub">Degree, minor specialization, and schooling — with the numbers attached.</p>
+        </div>
 
-        <!-- IIT Delhi main tile -->
-        <section class="tile tile-4x2 tile-edu interactive">
-            <div class="tile-label"><span class="num">/</span> Current</div>
-            <div class="edu-school">Indian Institute of Technology Delhi</div>
-            <div class="edu-degree">B.Tech + M.Tech Dual Degree · Chemical Engineering</div>
-            <div class="edu-meta">
-                <span>Jul 2023 — Present</span>
-                <span class="gpa">CGPA: 8.023 / 10.0</span>
-                <span>3rd year</span>
+        <!-- Headline stat row -->
+        <div class="metrics reveal" style="border-radius:var(--radius);border:1px solid var(--line);margin-bottom:2.4rem;">
+            <div class="metrics-inner">
+                <div class="metric"><b>8.023</b><span>CGPA — B.Tech + M.Tech</span></div>
+                <div class="metric"><b><span class="tick">▲</span>10.0</b><span>GPA — CS minor area</span></div>
+                <div class="metric"><b>91.6%</b><span>Class XII — CBSE</span></div>
+                <div class="metric"><b>2023 –</b><span>3rd year · ongoing</span></div>
             </div>
-            <div>
-                <div class="edu-coursework-label">Relevant Courses</div>
-                <div class="edu-courses">
-                    <span class="chip">Data Structures &amp; Algorithms</span>
-                    <span class="chip">Probability &amp; Stochastic Processes</span>
-                    <span class="chip">Linear Algebra</span>
-                    <span class="chip">Calculus</span>
-                    <span class="chip">Differential Equations</span>
-                    <span class="chip">Numerical Methods</span>
-                    <span class="chip">Macroeconomics</span>
+        </div>
+
+        <!-- Timeline -->
+        <div class="xp">
+            <!-- Degree -->
+            <article class="xp-item reveal">
+                <div class="xp-top">
+                    <div>
+                        <h3>Indian Institute of Technology Delhi</h3>
+                        <p class="xp-role">B.Tech + M.Tech, Dual Degree — Chemical Engineering</p>
+                    </div>
+                    <span class="xp-meta">2023 – PRESENT · 3RD YEAR</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- CGPA -->
-        <section class="tile tile-1x1 tile-stat interactive">
-            <div class="tile-label"><span class="num">/</span> CGPA</div>
-            <div>
-                <div class="stat-value">8.023</div>
-                <div class="stat-meta">out of <strong>10.0</strong></div>
-            </div>
-        </section>
-
-        <!-- JEE -->
-        <section class="tile tile-1x1 tile-stat interactive">
-            <div class="tile-label"><span class="num">/</span> JEE Advanced</div>
-            <div>
-                <div class="stat-value">4216</div>
-                <div class="stat-meta">All-India · <strong>top 0.4%</strong></div>
-            </div>
-        </section>
-
-        <!-- Schools -->
-        <section class="tile tile-2x2 interactive">
-            <div class="tile-label"><span class="num">/</span> Earlier schooling</div>
-            <div class="school-line">
-                <div class="school-name">
-                    <strong>Guru Nanak Khalsa Sr. Sec.</strong><br>
-                    <span style="font-size: 11px; color: var(--text-faint);">Class XII · CBSE · Chandigarh · Mar 2023</span>
+                <ul>
+                    <li>Maintaining a <span class="num">CGPA 8.023 / 10.0</span> across the integrated five-year dual-degree program.</li>
+                    <li>Pursuing a <strong>minor area / specialization in Computer Science</strong> alongside the core degree — <span class="num">5 of 20 credits</span> completed at a perfect <span class="num">10.0 / 10.0</span> GPA so far.</li>
+                    <li>Coursework spanning data structures &amp; algorithms, probability &amp; stochastic processes, linear algebra, numerical methods, and differential equations.</li>
+                </ul>
+                <div class="stack" style="margin-top:1.1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                    <span class="chip">Chemical Engineering</span><span class="chip">Dual Degree</span><span class="chip">CS Minor</span><span class="chip">CGPA 8.023</span>
                 </div>
-                <div class="school-grade">91.6%</div>
-            </div>
-            <div class="school-line">
-                <div class="school-name">
-                    <strong>Little Flower Convent</strong><br>
-                    <span style="font-size: 11px; color: var(--text-faint);">Class X · ICSE · Panchkula · Mar 2021</span>
-                </div>
-                <div class="school-grade">92.6%</div>
-            </div>
-        </section>
+            </article>
 
-        <!-- Recognition -->
-        <section class="tile tile-6x1 tile-recognition interactive">
-            <div class="tile-label"><span class="num">/</span> Recognition</div>
-            <div class="rec-grid">
-                <div class="rec-row">
-                    <span class="rec-year">2023</span>
-                    <span class="rec-text"><strong>JEE Advanced AIR 4216</strong> — top 0.4% of 200k+ candidates; improved from AIR 9310 in JEE Mains.</span>
+            <!-- CS Minor — highlighted panel -->
+            <article class="xp-item reveal">
+                <div class="xp-top">
+                    <div>
+                        <h3>Minor Area — Computer Science</h3>
+                        <p class="xp-role">Specialization · IIT Delhi</p>
+                    </div>
+                    <span class="xp-meta">IN PROGRESS</span>
                 </div>
-                <div class="rec-row">
-                    <span class="rec-year">2023</span>
-                    <span class="rec-text"><strong>Course Star Certificate</strong> — IIT Delhi, for solving a star-level problem in Introduction to Computer Science (C).</span>
+                <div class="panel" style="margin-top:0.8rem;">
+                    <div class="panel-bar"><span class="dots"><i></i><i></i><i></i></span> cs_minor.progress <span class="path">~/iitd</span></div>
+                    <div class="panel-body">
+                        <div style="display:flex;justify-content:space-between;font-family:var(--mono);font-size:0.74rem;color:var(--text-dim);margin-bottom:0.5rem;">
+                            <span>credits completed</span>
+                            <span style="color:var(--green)">5 / 20 · GPA 10.0</span>
+                        </div>
+                        <div style="height:8px;background:rgba(0,255,156,0.08);border-radius:4px;overflow:hidden;">
+                            <div id="minor-bar" style="height:100%;width:0;background:linear-gradient(90deg,var(--green-dim),var(--green));border-radius:4px;transition:width 1.2s cubic-bezier(.4,0,.2,1);box-shadow:0 0 14px var(--green-glow);"></div>
+                        </div>
+                        <p style="margin-top:0.9rem;color:var(--text-dim);font-size:0.9rem;">
+                            On track for a formal CS minor — <strong style="color:var(--text)">25% complete</strong>, holding a perfect <strong style="color:var(--green)">10.0 / 10.0</strong> across the credits taken.
+                        </p>
+                    </div>
                 </div>
-                <div class="rec-row">
-                    <span class="rec-year">2024</span>
-                    <span class="rec-text"><strong>Stanford × DeepLearning.AI</strong> on Coursera — Supervised ML: Regression &amp; Classification (Andrew Ng).</span>
-                </div>
-            </div>
-        </section>
+            </article>
 
+            <!-- Class XII -->
+            <article class="xp-item reveal">
+                <div class="xp-top">
+                    <div>
+                        <h3>Guru Nanak Khalsa Senior Secondary School</h3>
+                        <p class="xp-role">Class XII — CBSE · Chandigarh</p>
+                    </div>
+                    <span class="xp-meta">MAR 2023</span>
+                </div>
+                <ul>
+                    <li>Scored <span class="num">91.6%</span> in the CBSE Class XII board examinations (PCM + Computer Science).</li>
+                </ul>
+                <div class="stack" style="margin-top:1.1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                    <span class="chip">Physics</span><span class="chip">Chemistry</span><span class="chip">Mathematics</span><span class="chip">Computer Science</span>
+                </div>
+            </article>
+        </div>
     </div>
 
     <footer class="foot">
-        © 2026 Anirudh Goyal · <a href="index.html">home</a>
+        <span>© 2026 Anirudh Goyal — IIT Delhi</span>
+        <span><a href="projects.html">← projects</a> · <a href="skills.html">skills →</a></span>
     </footer>
-</div>
-
-<nav class="dock" aria-label="Site navigation">
-    <a href="index.html"><i class="fas fa-house"></i><span>Home</span></a>
-    <a href="experience.html"><i class="fas fa-briefcase"></i><span>Experience</span></a>
-    <a href="projects.html"><i class="fas fa-cube"></i><span>Projects</span></a>
-    <a href="education.html"><i class="fas fa-graduation-cap"></i><span>Education</span></a>
-    <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
-</nav>
+</main>
 
 <script src="script.js" defer></script>
+<script>
+/* animate the CS minor progress bar (5/20 = 25%) on load */
+(function(){
+  const bar = document.getElementById('minor-bar');
+  if(!bar) return;
+  const io = new IntersectionObserver(es=>{
+    es.forEach(e=>{ if(e.isIntersecting){ bar.style.width='25%'; io.disconnect(); } });
+  },{threshold:0.3});
+  io.observe(bar);
+  setTimeout(()=>{ bar.style.width='25%'; }, 1600); // failsafe
+})();
+</script>
 </body>
 </html>
