@@ -44,12 +44,5 @@ python3 -m http.server 8000
 - Phone number on contact page (or remove)
 - Course Star certificate, if not accurate
 - Sample project GitHub links point to your profile — swap in real repo URLs
-
-## Notes
-
-- Experience shows **only Giesecke+Devrient** (Outlier and IITDAA removed per your instruction).
-- CGPA is **8.023**.
-- All figures (F1 +24%, Sharpe +0.34, 36 features, 22K trades) come from your LOB project README.
-
 ---
 © 2026 Anirudh Goyal — IIT Delhi
